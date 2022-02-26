@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button {
+            background: #ccc;
+            padding: 10px;
+            color: #000;
+            display: inline-block;
+        }
+
+        .bar-block {
+            margin-bottom: 20px;
+        }
+
+
+        .red {
+            background: red !important;
+            color: #fff !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bar-block">
+        <div class="container">
+            <h5>選單</h5>
+            <a href="javascript:void(0)" class="bar-item button tablink testbtn"
+                onclick="openClass(event, 'class1')">教學1</a>
+            <a href="javascript:void(0)" class="bar-item button tablink" onclick="openClass(event, 'class2')">教學2</a>
+            <a href="javascript:void(0)" class="bar-item button tablink" onclick="openClass(event, 'class3')">教學3</a>
+            <a href="javascript:void(0)" class="bar-item button tablink" onclick="openClass(event, 'class4')">教學4</a>
+        </div>
+    </div>
+
+    <div id="class1" class="container class">
+        教學1內容
+        教學1內容
+        教學1內容
+    </div>
+
+    <div id="class2" class="container class">
+        教學2內容
+        教學2內容
+        教學2內容
+    </div>
+    <div id="class3" class="container class">
+        教學3內容
+        教學3內容
+        教學3內容
+    </div>
+    <div id="class4" class="container class">
+        教學4內容
+        教學4內容
+        教學4內容
+    </div>
+    <script>
+        function openClass(evt, className) {
+            var i, x, tablinks;
+            // x抓取頁面中的class="class"
+            x = document.getElementsByClassName("class");
+            //計算x的長度並將這些class="class"都進行display:none隱藏的動作
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            //tablinks 抓取頁面中的tablink
+            tablinks = document.getElementsByClassName("tablink");
+            //將tablinks代入for循環中並利用classList.remove刪除class="red" ，就是每執行一次function的時候就進行全部tablinks移除class="red"
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].classList.remove("red");
+            }
+            //document.getElementById=className(函數帶進來的參數)樣式設定為display:block; 當前點擊的a link執行function 顯示出來對應的內容。
+            document.getElementById(className).style.display = "block";
+            //並對當前點擊的 a link 新增“red” 這個class
+            evt.currentTarget.classList.add("red");
+        }
+        //預設testbtn 這個class頁面一加載後執行click();的動作。也就是點擊了testbtn有這個class的按鈕來執行上方寫的function 
+        var mybtn = document.getElementsByClassName("testbtn")[0];
+        mybtn.click();
+        
+    </script>
+</body>
+
+</html>

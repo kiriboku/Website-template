@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- <div id="app">
+        <h2>你考幾分呢</h2>
+        <input type="text" v-model="score">
+        <div v-if="score>60">你及格了，很棒</div>
+        <div v-if="score<60">你不及格了，很爛</div>
+    </div>
+    <br><br> -->
+
+    <!-- <div id="app">
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="check2" value="雞" v-model="checkarray">
+            <label for="check2">雞</label>
+            <input type="checkbox" class="form-check-input" id="check3" value="牛" v-model="checkarray">
+            <label for="check3">牛</label>
+            <h4>火鍋裡有 {{checkarray}}</h4>
+        </div>
+    </div> -->
+
+    <!-- <div id="app">
+        <h2>請輸入台幣數量</h2>
+        <input type="text" v-model="TW">
+        <h3>日圓匯率為 {{TW*0.2331}}</h3>
+    </div> -->
+
+    <!-- <div class="bank">
+        <h1>請輸入台幣數量</h1>
+        <input type="text" v-model="TW">
+        <h2>日圓數量為{{TW}}</h2>
+        <h2>韓元數量為{{TW}}</h2>
+
+    </div> -->
+
+    <!-- <div class="app">
+        <h1>{{color[0]}}</h1>
+        <ul>
+            <li v-for="color in colors">
+                {{color}}
+            </li>
+        </ul>
+    </div> -->
+    <!-- <div class="app">
+        <input type="checkbox" v-model='colors' id="color" value="藍色">
+        <label for="color">藍色</label>
+        <input type="checkbox" v-model='colors' id="color" value="紅色">
+        <label for="color">紅色</label>
+        <input type="checkbox" v-model='colors' id="color" value="綠色">
+        <label for="color">綠色</label>
+        <h3>最愛的顏色</h3>
+        <ul>
+            <li v-for="color in colors" v-on:click="fvCol(color)">
+                {{color}}
+            </li>
+        </ul>
+    </div> -->
+
+    <!-- <div class="container">
+        <div class="app">
+            <h3>請輸入待辦事項</h3>
+            <br>
+            <input type="text" v-model="todo" @keyup.enter="add(todo)">
+            <h4>{{todo}}</h4>
+            <ul>
+                <li v-for="item in list">
+                    {{item.title}} - <a href="#" @click="remove(item)">Delete</a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+
+    <!-- <div class="app">
+        <input type="text" v-model="NT">
+        <h4>日圓的匯率 {{japan}}</h4>
+        <h4>韓圓的匯率 {{korean}}</h4>
+    </div> -->
+
+    <div id="app">
+        <ul>
+            <li @click="fir">第一頁</li>
+        </ul>
+        <div v-show="one">
+            <h1>One</h1>
+        </div>
+        <div v-show="two">
+            <h1>Two</h1>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./javascript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+nav{
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+
+nav ul{
+    float: right;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width:768px) {
+    label.logo{
+        color: white;
+        font-size: 60px;
+        line-height: 80px;
+        padding: 0 50px;
+        font-weight: bold;
+    }
+    nav ul{
+        height: 50vh;
+        width: 100%;
+        position: fixed;
+        background: #2c3e50;
+        text-align: center;
+        left: -100%;
+    }
+    nav ul li{
+        display: block;
+    }
+}

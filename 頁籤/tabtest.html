@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: sans-serif;
+        }
+
+        .header {
+            width: 100vw;
+            height: 100px;
+            background: plum;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .header h1 {
+            margin-right: 50px;
+            font-size: 36px;
+            color: white;
+        }
+
+        li {
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 22px;
+            font-weight: 500;
+            background: palevioletred;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        #btn {
+            width: 50px;
+            height: 50px;
+            background: purple;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Tesla Logo</h1>
+        <ul>
+            <li onclick="tabswitch('area1')">Home</li>
+            <li onclick="tabswitch('area2')">About</li>
+            <li onclick="tabswitch('area3')">Service</li>
+        </ul>
+        <div id="btn"></div>
+    </header>
+    <div class="container">
+        <div class="tab" id="area1">
+            <h1>區塊1</h1>
+        </div>
+        <div class="tab" id="area2">
+            <h1>區塊2</h1>
+        </div>
+        <div class="tab" id="area3">
+            <h1>區塊3</h1>
+        </div>
+    </div>
+    <script>
+        function tabswitch(divid) {
+            var areaDis = document.querySelectorAll('.tab')
+            for (i = 0; i < areaDis.length; i++) {
+                areaDis[i].style.display = 'none'
+            }
+            document.getElementById(divid).style.display='block'
+        }
+
+    </script>
+</body>
+
+</html>
